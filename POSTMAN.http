@@ -1,0 +1,122 @@
+### CATEGORIES
+
+### GET ALL CATEGORIES
+
+GET http://localhost:3000/api/categories
+
+### GET ONE CATEGORY
+
+GET http://localhost:3000/api/categories/1
+
+
+### OFFERS
+
+### GET ALL OFFERS
+
+GET http://localhost:3000/api/offers
+
+### GET ONE OFFER
+
+GET http://localhost:3000/api/offers/1
+
+### POST ONE OFFER
+
+POST http://localhost:3000/api/offers
+content-Type: application/json
+
+{
+    "name": "Metal Gear Solid 2",
+    "description": "jeu vidéo",
+    "etat": "Bon état",
+    "photos": null,
+    "prix": 30,
+    "address": "10 Rue de Metal",
+    "cp": 75000,
+    "region": "Ile-de-France",
+    "city": "Paris",
+    "category_id": 3,
+    "users_id": 1
+}
+
+### PUT ONE OFFER
+PUT http://localhost:3000/api/offers/3
+content-Type: application/json
+
+{
+    "prix": 35
+}
+
+### DELETE ONE OFFER
+DELETE http://localhost:3000/api/offers/4
+
+
+### FAVORITE
+
+### GET ALL FAVORITES
+
+GET http://localhost:3000/api/favorites
+
+### ADD TO FAVORITE
+
+POST http://localhost:3000/api/favorites
+content-type: application/json
+
+{
+  "users_id": 1,
+  "annonces_id": 2
+}
+
+
+### USERS
+
+### GET ALL USERS
+
+GET http://localhost:3000/api/users
+
+### GET ONE USER
+
+GET http://localhost:3000/api/users/1
+
+### GET USER FAVORITE
+
+GET http://localhost:3000/api/users/1/favorite
+
+### GET USER OFFERS
+
+GET http://localhost:3000/api/users/1/offers
+
+### POST A USER
+
+POST http://localhost:3000/api/users
+content-Type: application/json
+
+{
+"firstname": "Edith",
+"lastname": "Dupont",
+"email": "edith@free.fr",
+"password": "123456",
+"address": "13 Rue Node",
+"cp": 75000,
+"region": "Ile de France",
+"city": "Paris",
+"phone": "102030405"
+}
+
+
+### AUTHENTIFICATION
+
+### LOGIN
+
+POST http://localhost:3000/api/auth/login
+content-Type: application/json
+
+{
+  "email": "edith@free.fr",
+  "password": "123456"
+}
+
+### AUTHORIZATION
+POST http://localhost:3000/api/auth
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJpZCI6MywiZmlyc3RuYW1lIjoiRWRpdGgiLCJsYXN0bmFtZSI6IkR1cG9udCIsImVtYWlsIjoiZWRpdGhAb2Nsb2NrLmlvIiwicGFzc3dvcmQiOiIkMmIkMTAkOXFvYnBRVVgvN00xQTFEUVgucE5EZVNnLmkyc3VIZkw2MkRqbkguQks1LzB5a0pXdWg1NVMiLCJhZGRyZXNzIjoiMTMgUnVlIE8nQ2xvY2siLCJjcCI6NzUwMDAsInJlZ2lvbiI6IklsZSBkZSBGcmFuY2UiLCJjaXR5IjoiUGFyaXMiLCJwaG9uZSI6IjEwMjAzMDQwNSJ9XSwiaWF0IjoxNjU1ODMxNDM3LCJleHAiOjE2NTU4MzUwMzd9.k7234fWKf70ryxBx7vLpZyGv-Y6hmxy7EuGM6msQGcw
+
+
